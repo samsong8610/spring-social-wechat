@@ -1,0 +1,23 @@
+apply plugin: 'java'
+
+group 'org.springframework.social'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    springSocialVersion = '1.1.4.RELEASE'
+    jacksonVersion = '2.8.10'
+    junitVersion = '4.12'
+}
+
+dependencies {
+    compile "org.springframework.social:spring-social-core:${springSocialVersion}"
+    compile "org.springframework.social:spring-social-config:${springSocialVersion}"
+    compile "org.springframework.social:spring-social-web:${springSocialVersion}"
+    compile "org.springframework.social:spring-social-security:${springSocialVersion}"
+    compile ("com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}")
+    testCompile "junit:junit:${junitVersion}"
+}
